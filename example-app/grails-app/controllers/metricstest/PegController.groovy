@@ -31,9 +31,10 @@ class PegController {
     }
 
     @Timed( name = "timer" )
-    def timed() {
-        Thread.sleep( 200 )
-        render( contentType: "text/plain", text: "Timed!" )
+    def timed(Integer id) {
+        Integer millis = id ?: 200
+        Thread.sleep(millis)
+        render( contentType: "text/plain", text: "Timed for $millis!" )
     }
 
     def counter() {
@@ -41,9 +42,11 @@ class PegController {
         render( contentType: "text/plain", text: "Counted!" )
     }
 
-    def histogram() {
-        histogram.update(1)
-        render( contentType: "text/plain", text: "Histogram updated!" )
+    // pass in a different value to update the histogram
+    def histogram(Integer id) {
+        Integer value = id ?: 1
+        histogram.update(value)
+        render( contentType: "text/plain", text: "Histogram updated with $value!" )
     }
 
 }
