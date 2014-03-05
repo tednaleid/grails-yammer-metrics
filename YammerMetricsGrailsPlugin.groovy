@@ -24,7 +24,7 @@ class YammerMetricsGrailsPlugin {
 
     def author = "Jeff Ellis"
     def authorEmail = "codemonkey@ellises.us"
-    def title = "Grails plugin to package Coda Hale's metrics jars"
+    def title = "Yammer Metrics"
     def description = '''\\
 This plugin provides an easy way for grails apps to create application health checks and
 metrics (timers, meters, counters, histograms, etc) from Coda Hale's metrics package

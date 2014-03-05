@@ -8,3 +8,5 @@ target/
 .DS_Store
 grails-yammer-metrics-*.zip
 plugin.xml
+*.iws
+*.ipr
